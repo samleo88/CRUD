@@ -1,0 +1,102 @@
+		 *{ /* general*/
+			padding: 0px;
+			margin: 0px;
+
+		}
+    
+        body { /* fondo pantalla */
+               background-color:blue;
+             }
+
+
+        .navegacion
+          {
+             width: 1000px;
+             margin: 30px auto;
+             background-color:white;
+          }
+
+        .navegacion ul /* todos los ul menu y submenus*/
+          {
+            list-style: none;  /* quita los puntos*/
+          }
+
+        .menu > li
+          {
+           position: relative;
+           display: inline-block; /* muestra los submenus debajo de los menus*/
+          }
+
+        .menu > li > a  /* letras del menu el signo mayor es que apunta al padre no hijos*/
+          {
+           display: block; 
+           padding: 15px 50px;
+           color: green;
+           font-family: 'arial';
+           text-decoration: none;
+          }  
+
+        .menu  li  a:hover /* para todos padre e hijos*/
+          {
+           color: black ; /* color cuando paso el mouse*/ 
+           transition: all 1.5s; /* cambia de color poco a poco y no de una*/ 
+          }  
+
+/*  s u b m e n u   */
+
+       .submenu1
+          {
+          	position: absolute;
+            background: white;
+          	width: 100%;
+          	visibility: hidden;
+          	opacity: 0;
+          	transition: opacity 1.5s;
+          	
+          }
+
+       .submenu1 li a
+          {
+          	display: block;
+          	padding: 10px;
+          	color: black;
+          	font-family: 'sans';
+          	 text-decoration: none;
+          }
+
+     .menu li:hover .submenu1     
+       {
+       	visibility: visible;
+       	opacity: 1;
+       }
+
+
+/*  s u b m e n u  2  */
+
+       .submenu2
+          {
+            right: : 100%;
+            
+           	position: absolute;
+          	background: gray;
+          	width: 100%;
+          	display: block;
+          	visibility: hidden;
+          	opacity: 0;
+          	transition: opacity 1.5s;
+          }
+
+       .submenu2 li a
+          {
+          	display: block;
+          	padding: 10px;
+          	color: black;
+          	font-family: 'sans';
+          	 text-decoration: none;
+          }
+
+     .menu li:hover .submenu2     
+       {
+       	visibility: visible;
+       	opacity: 1;
+       }
